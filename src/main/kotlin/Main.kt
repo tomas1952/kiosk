@@ -1,7 +1,24 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import common.enumeration.MainMenu.*
+import menu.MenuControllerImpl
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+    val menuController = MenuControllerImpl()
+    while(true) {
+        menuController.printMainMenu()
+        when(menuController.inputMainMenu()) {
+            BURGER -> TODO()
+            CHICKEN -> TODO()
+            FLAT_TOP_DOGS -> TODO()
+            SIDE -> TODO()
+            CUSTARD -> TODO()
+            CONCRETES -> TODO()
+            DRINKS -> TODO()
+            WOOF -> TODO()
+            BREAKFAST -> TODO()
+            QUIT -> {
+                println("프로그램을 종료합니다.")
+                break
+            }
+        }
+    }
 }
