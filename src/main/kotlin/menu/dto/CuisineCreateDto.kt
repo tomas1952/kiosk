@@ -5,12 +5,14 @@ import menu.entity.Cuisine
 import menu.entity.CuisineCategory
 
 class CuisineCreateDto(
-    var name: String,
-    var description: String,
-    var categoryId: Long?,
-    var price: Int,
-    var eatingMethods: List<String>,
-    var breakfastAvailability: Boolean,
+    val name: String,
+    val koreanName: String,
+    val description: String,
+    val categoryId: Long?,
+    val price: Int,
+    val extraPrice: Int?,
+    val eatingMethods: List<String>,
+    val onlyBreakfast: Boolean,
 ) {
     fun toEntity(category: CuisineCategory?): Cuisine {
         val hashSet = HashSet<EatingMethod>()
@@ -22,11 +24,13 @@ class CuisineCreateDto(
 
         return Cuisine(
                 name = name,
+                koreanName = koreanName,
                 description = description,
                 categoryId = category?.id,
                 price = price,
+                extraPrice = extraPrice,
                 eatingMethods = hashSet,
-                breakfastAvailability = breakfastAvailability,
+                onlyBreakfast = onlyBreakfast,
             )
     }
 }

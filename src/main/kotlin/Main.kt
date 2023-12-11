@@ -9,7 +9,6 @@ fun main(args: Array<String>) {
             BURGER -> TODO()
             CHICKEN -> TODO()
             FLAT_TOP_DOGS -> TODO()
-            SIDE -> TODO()
             CUSTARD -> TODO()
             CONCRETES -> TODO()
             DRINKS -> TODO()

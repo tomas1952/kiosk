@@ -7,6 +7,7 @@ import menu.dto.CuisineReadDto
 
 interface CuisineService {
     fun createCategory(dto: CuisineCategoryCreateDto): CuisineCategoryReadDto
+    fun createCategories(dtos: List<CuisineCategoryCreateDto>): List<CuisineCategoryReadDto>
     fun findAllCategories(): List<CuisineCategoryReadDto>
     fun createCuisine(dto: CuisineCreateDto): CuisineReadDto
     fun findAllCuisine(): List<CuisineReadDto>
